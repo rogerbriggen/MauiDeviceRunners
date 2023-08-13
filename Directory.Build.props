@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <MauiVersion>7.0.92</MauiVersion>
+    <!--<MauiVersion>7.0.92</MauiVersion>-->
   </PropertyGroup>
 
 </Project>

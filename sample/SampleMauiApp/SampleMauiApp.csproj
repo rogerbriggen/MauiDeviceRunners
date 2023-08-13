@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0-ios;net7.0-android;net7.0-maccatalyst;net7.0-tizen</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>net8.0-ios;net8.0-android;net8.0-maccatalyst;</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>SampleMauiApp</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -41,9 +41,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-preview.7.23375.6" />
     <PackageReference Include="xunit" Version="2.5.0-pre.44" />
     <PackageReference Include="xunit.runner.utility" Version="2.5.0-pre.44" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.0-preview.7.8842" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,5 +65,9 @@
       <PackagingOutputs Remove="@(_VisualStudioTestRunnerFiles)" />
     </ItemGroup>
   </Target>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.0-preview.7.8842" />
+  </ItemGroup>
 
 </Project>
